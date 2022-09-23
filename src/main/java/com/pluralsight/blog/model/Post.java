@@ -25,11 +25,11 @@ public class Post {
     @CreationTimestamp
     private Date date;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER)
     private Author author;
 
     public Author getAuthor() {
-        return this.author;
+        return author;
     }
 
     public void setAuthor(Author author) {

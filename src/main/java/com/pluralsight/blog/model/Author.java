@@ -29,6 +29,18 @@ public class Author {
         posts = new ArrayList<>();
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    // public void setPosts(List<Post> post) {
+    // this.posts = post;
+    // }
+
+    public void addPost(Post post) {
+        this.posts = posts;
+    }
+
     public Author(String username, String firstname, String lastname, String password) {
         this();
         this.firstname = firstname;
@@ -89,13 +101,5 @@ public class Author {
             return false;
         }
         return true;
-    }
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    public void addPost(List<Post> post) {
-        this.posts = post;
     }
 }
