@@ -15,9 +15,9 @@ import java.util.stream.IntStream;
 @Component
 public class DatabaseLoader implements ApplicationRunner {
     private final String[] templates = {
-            "Smart Home %s", "Mobile %s - For When You're On he Go", "The %s - Your New Favorite Accessory"};
+            "Smart Home %s", "Mobile %s - For When You're On he Go", "The %s - Your New Favorite Accessory" };
     private final String[] gadgets = {
-            "Earbuds", "Speakers", "Tripod", "Instant Pot", "Coffee Cup", "Keyboard", "Sunglasses"};
+            "Earbuds", "Speakers", "Tripod", "Instant Pot", "Coffee Cup", "Keyboard", "Sunglasses" };
     public List<Post> randomPosts = new ArrayList<>();
     public List<Author> authors = new ArrayList<>();
 
@@ -26,7 +26,7 @@ public class DatabaseLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        IntStream.range(0,40).forEach(i->{
+        IntStream.range(0, 40).forEach(i -> {
             String template = templates[i % templates.length];
             String gadget = gadgets[i % gadgets.length];
 
