@@ -16,6 +16,8 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Version
+    private Long version;
     private String firstname;
     private String lastname;
     private String username;
@@ -27,18 +29,6 @@ public class Author {
     public Author() {
         super();
         posts = new ArrayList<>();
-    }
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    // public void setPosts(List<Post> post) {
-    // this.posts = post;
-    // }
-
-    public void addPost(Post post) {
-        this.posts = posts;
     }
 
     public Author(String username, String firstname, String lastname, String password) {
@@ -101,5 +91,13 @@ public class Author {
             return false;
         }
         return true;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void addPost(Post post) {
+        posts.add(post);
     }
 }
